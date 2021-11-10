@@ -1,0 +1,117 @@
+<mat-card>
+  <form (submit)="onAdicionarCliente(clienteForm)" #clienteForm="ngForm">
+    <mat-form-field>
+      <input
+        required
+        minlength="4"
+        type="text"
+        matInput
+        placeholder="nome"
+        name="nome"
+        ngModel
+        #nome="ngModel"
+      /><mat-error *ngIf="nome.invalid">Digite um nome válido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="text"
+        required
+        matInput
+        placeholder="fone"
+        name="fone"
+        ngModel
+        #fone="ngModel"
+      />
+      <mat-error *ngIf="fone.invalid">Digite um telefone válido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="text"
+        required
+        matInput
+        placeholder="email"
+        name="email"
+        ngModel
+        #email="ngModel"
+      />
+      <mat-error *ngIf="email.invalid">Digite um nome válido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="text"
+        required
+        matInput
+        placeholder="senha"
+        name="senha"
+        ngModel
+        #senha="ngModel"
+      />
+      <mat-error *ngIf="senha.invalid">Informe nova senha</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="text"
+        required
+        matInput
+        placeholder="endereco"
+        name="endereco"
+        ngModel
+        #endereco="ngModel"
+      />
+      <mat-error *ngIf="endereco.invalid">Digite o endereço</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="text"
+        required
+        matInput
+        placeholder="cidade"
+        name="cidade"
+        ngModel
+        #cidade="ngModel"
+      />
+      <mat-error *ngIf="cidade.invalid">Informe a cidade</mat-error>
+    </mat-form-field>
+    
+      <select
+        required
+        matSelect
+        placeholder="estado"
+        name="estado"
+        ngModel
+        #estado="ngModel"
+      ><option value="SP">SP</option>
+      <option>RJ</option>
+      <option>MG</option>
+      <option>BA</option>
+      <option>SE</option>
+      <option>RN</option>
+      <option>CE</option>
+      <option>TO</option>
+      <option>RO</option>
+      <option>RR</option>
+      <option>RS</option>
+      <option>MS</option>
+      <option>MT</option>
+      <option>SC</option>
+      <option>PR</option>
+      <option>PA</option>
+      <option>PI</option>
+    </select>
+      <mat-error *ngIf="estado.invalid">Digite o Estado</mat-error>
+   
+    <mat-form-field>
+      <input
+        type="text"
+        required
+        matInput
+        placeholder="bairro"
+        name="bairro"
+        ngModel
+        #bairro="ngModel"
+      />
+      <mat-error *ngIf="estado.invalid">Digite o Bairro</mat-error>
+    </mat-form-field>
+    <button color="primary" mat-raised-button>Inserir Cliente</button>
+  </form>
+</mat-card>

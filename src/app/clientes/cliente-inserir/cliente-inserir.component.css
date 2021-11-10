@@ -1,0 +1,22 @@
+
+mat-form-field,
+input {
+  width: 100%;
+  
+}
+
+.mat-raised-button{
+    
+  background-color: rgb(240, 162, 47);
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: rgb(8, 8, 8) !important;
+ }
+::ng-deep.mat-form-field.mat-focused .mat-form-field-ripple{
+  background-color: rgb(243, 151, 30);
+}
+::ng-reflect-model{
+  font-display: 3;
+}

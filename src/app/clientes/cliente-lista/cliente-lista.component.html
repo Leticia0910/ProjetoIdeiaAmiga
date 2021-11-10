@@ -1,0 +1,29 @@
+<mat-accordion *ngIf="clientes.length > 0">
+    <mat-expansion-panel *ngFor="let flu of clientes">
+      <mat-expansion-panel-header
+        >Nome: {{ flu.nome }}
+      </mat-expansion-panel-header>
+      <p>Fone: {{ flu.fone }}</p>
+    <hr />
+    <p>Email: {{ flu.email }}</p>
+    <hr />
+    <p>Senha: {{ flu.senha }}</p>
+    <hr />
+    <p>Endereço: {{ flu.endereco }}</p>
+    <hr />
+    <p>Cidade: {{ flu.cidade }}</p>
+    <hr />
+    <p>Estado: {{ flu.estado }}</p>
+    <hr />
+    <p>Bairro: {{ flu.bairro }}</p>
+    <hr />
+      <mat-action-row>
+        <button mat-button color="primary">EDITAR</button>
+        <button mat-button color="warn"(click)="onDelete(flu.id)">REMOVER</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+  <p class="mat-body-1" style="text-align: center" *ngIf="clientes.length <= 0">
+    Nenhum cliente cadastrado
+  </p>
